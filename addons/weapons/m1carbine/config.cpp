@@ -11,7 +11,8 @@ class CfgPatches {
     };
 };
 
-class Mode_SemiAuto;
+class Mode_SemiAuto;    // External class reference
+class Mode_FullAuto;	// External class reference
 
 class CfgWeapons 
 {
@@ -54,6 +55,14 @@ class CfgWeapons
     class uns_m2carbine_shorty_p : Uns_Pistol 
     {
         class Single: Single
+        {
+            class StandardSound: StandardSound
+            {
+                soundSetShot[] = {"jsrs_m1carbine_shot_soundset", "jsrs_ww2_carbine_reverb_soundset"};
+            };
+        };
+
+        class FullAuto : Mode_FullAuto 
         {
             class StandardSound: StandardSound
             {
