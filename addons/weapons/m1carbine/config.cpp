@@ -51,23 +51,4 @@ class CfgWeapons
             class StandardSound;
         };
     };
-
-    class uns_m2carbine_shorty_p : Uns_Pistol 
-    {
-        class Single: Single
-        {
-            class StandardSound: StandardSound
-            {
-                soundSetShot[] = {"jsrs_m1carbine_shot_soundset", "jsrs_ww2_carbine_reverb_soundset"};
-            };
-        };
-
-        class FullAuto : Mode_FullAuto 
-        {
-            class StandardSound: StandardSound
-            {
-                soundSetShot[] = {"jsrs_m1carbine_shot_soundset", "jsrs_ww2_carbine_reverb_soundset"};
-            };
-        };
-    };
 };
